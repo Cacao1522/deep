@@ -48,12 +48,12 @@ np.random.seed(123)
 def sigmoid(x):
     # 課題2(a) 
     # returnの後にシグモイド関数を返すプログラムを書く
-    return 
+    return 1/(1+np.exp(-x))
 
 def error_function(f, y):
     # 課題2(b) 
     # returnの後に誤差関数を返すプログラムを書く
-    return 
+    return -y*np.log(f)-(1-y)*log(1-f)
 
 ##### パラメータの初期値 (ランダム)
 w = np.random.normal(0, 0.3, d+1)
@@ -80,10 +80,11 @@ for epoch in range(0, num_epoch):
         # ヒント: 先に上でsigmoid関数を定義し, 
         #         パラメータ変数'w'と入力'xi'の内積(np.dot)の結果を渡す
         # fi = シグモイドの出力 (i番目のx(xi)に対するfなのでfiとしてある)
+        fi = np.dot(sigmoid(w,xi))
 
         ### 課題2(b) 誤差評価 
         # fを計算したら，error_functionを定義し以下のコメントを外す
-        # e_train[i] = error_function(fi, yi)
+        e_train[i] = error_function(fi, yi)
 
         if epoch == 0:
             continue
@@ -94,7 +95,7 @@ for epoch in range(0, num_epoch):
         ### 課題2(c)
         # パラメータの更新
         # 確率的勾配降下法の更新式を書く（学習率eta_tの設定に注意）
-        # w = ???
+        w = w-eta*(fi-yi)@xi
     
     ##### エポックごとの訓練誤差
     error.append(sum(e_train)/n)
@@ -108,11 +109,11 @@ for epoch in range(0, num_epoch):
 
         ### 課題2(a) 
         # パーセプトロンの出力fを計算する(テスト)
-        # fi = ???
+        fi = np.dot(sigmoid(w,xi))
 
         ### 課題2(b) 誤差評価 
         # fを計算したら，error_functionを定義し以下のコメントを外す 
-        # e_test[j] = error_function(fi, yi)
+        e_test[j] = error_function(fi, yi)
     
     error_test.append(sum(e_test)/n_test)
 
