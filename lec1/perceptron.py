@@ -99,7 +99,7 @@ for epoch in range(0, num_epoch):
         ### 課題2(c)
         # パラメータの更新
         # 確率的勾配降下法の更新式を書く（学習率eta_tの設定に注意）
-        w = w - eta * (fi - yi) * xi
+        w = w - eta / epoch * (fi - yi) * xi
 
     ##### エポックごとの訓練誤差
     error.append(sum(e_train) / n)
