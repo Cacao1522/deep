@@ -1,0 +1,917 @@
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.6.7)  12 JUN 2024 15:06
+ restricted system commands enabled.
+**report.tex
+(./report.tex
+LaTeX2e <2024-06-01>
+L3 programming layer <2024-05-27>
+Lua module: luaotfload 2024-02-14 3.28 Lua based OpenType font support
+Lua module: lualibs 2023-07-13 2.76 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2023-07-13 2.76 ConTeXt Lua libraries -- extended c
+ollection.
+luaotfload | conf : Root cache directory is "C:/texlive/2024/texmf-var/luatex-ca
+che/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2023-12-28.lua" from kpse-res
+olved path "c:/texlive/2024/texmf-dist/tex/luatex/luaotfload/fontloader-2023-12-
+28.lua".
+Lua-only attribute luaotfload@noligature = 1
+luaotfload | init : Context OpenType loader version 3.134
+Inserting `luaotfload.node_processor' in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 2
+luaotfload | conf : Root cache directory is "C:/texlive/2024/texmf-var/luatex-ca
+che/generic/names".
+Inserting `luaotfload.harf.strip_prefix' in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' in `find_truetype_file'.
+Removing  `luaotfload.glyph_stream' from `glyph_stream_provider'.
+Inserting `luaotfload.harf.glyphstream' in `glyph_stream_provider'.
+Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
+Inserting `luaotfload.harf.finalize_hlist' in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' in `glyph_info'.
+Lua-only attribute luaotfload.letterspace_done = 3
+Inserting `luaotfload.aux.set_sscale_dimens' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_font_index' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.patch_cambria_domh' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.fixup_fontdata' in `luaotfload.patch_font_unsafe'.
+Inserting `luaotfload.aux.set_capheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_xheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' in `luaotfload.patch_font'.
+Inserting `tracingstacklevels' in `input_level_string'. (c:/texlive/2024/texmf-
+dist/tex/platex/base/jarticle.cls
+
+! LaTeX Error: This file needs format `pLaTeX2e'
+               but this is `LaTeX2e'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \NeedsTeXFormat{pLaTeX2e}
+                            
+? ar on input line 970.
+\c@MaxMatrixCols=\count266
+\dotsspace@=\muskip17
+\c@parentequation=\count267
+\dspbrk@lvl=\count268
+\tag@help=\toks18
+\row@=\count269
+\column@=\count270
+\maxfields@=\count271
+\andhelp@=\toks19
+\eqnshift@=\dimen144
+\alignsep@=\dimen145
+\tagshift@=\dimen146
+\tagwidth@=\dimen147
+\totwidth@=\dimen148
+\lineht@=\dimen149
+\@envbody=\toks20
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (c:/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+) (c:/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/05/23 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvipdfmx.def on input line 106.
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+File: dvipdfmx.def 2022/09/22 v5.0m Graphics/color driver for dvipdfmx
+))
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
+) (c:/texlive/2024/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2024/01/14 v1.3d Standard LaTeX Color (DPC)
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: dvipdfmx.def on input line 149.
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (c:/texlive/2024/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2023/12/19 v1.2f Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+)
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:32: LaTeX Error: Command \today undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \renewcommand{\today}
+                          {\number\year ï¿½N\number\month ï¿½ï¿½\number\day ...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count272
+\l__pdf_internal_box=\box54
+) (./report.aux)
+\openout1 = `report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:60: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 \begin{document}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: Undefined control sequence.
+l.66 {\large
+             \bf ï¿½mï¿½\ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: Undefined control sequence.
+l.66 {\large \bf
+                 ï¿½mï¿½\ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 {\large \bf ï¿½
+                    mï¿½\ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 {\large \bf ï¿½mï¿½
+                        \ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: Undefined control sequence.
+l.66 {\large \bf ï¿½mï¿½\ï
+                          ¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Invalid UTF-8 byte "BF.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 {\large \bf ï¿½mï¿½\ï¿
+                           ½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Invalid UTF-8 byte "BD.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 {\large \bf ï¿½mï¿½\ï¿½
+                            vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 {\large \bf ï¿½mï¿½\ï¿½vï¿½
+                                ï¿½ï¿½Oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 {\large \bf ï¿½mï¿½\ï¿½vï¿½ï¿½
+                                   ï¿½Oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 {\large \bf ï¿½mï¿½\ï¿½vï¿½ï¿½ï¿½
+                                      Oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 {\large \bf ï¿½mï¿½\ï¿½vï¿½ï¿½ï¿½Oï¿½
+                                          ï¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 {\large \bf ï¿½mï¿½\ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½
+                                             ï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 {\large \bf ï¿½mï¿½\ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½
+                                                ~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 ...ge \bf ï¿½mï¿½\ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½~ï¿½
+                                                  ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿½1...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 ...\bf ï¿½mï¿½\ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½~ï¿½ï¿½
+                                                  ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿½1ï¿½...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 ... ï¿½mï¿½\ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½
+                                                  Oï¿½ï¿½ï¿½KI ï¿½ï¿½1ï¿½ñƒŒ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 ...mï¿½\ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½
+                                                  ï¿½ï¿½KI ï¿½ï¿½1ï¿½ñƒŒƒ|ï¿...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 ...½\ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½
+                                                  ï¿½KI ï¿½ï¿½1ï¿½ñƒŒƒ|ï¿½[ï...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 ...¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½
+                                                  KI ï¿½ï¿½1ï¿½ñƒŒƒ|ï¿½[ï¿½g}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 ...ï¿½ï¿½Oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½
+                                                  ï¿½1ï¿½ñƒŒƒ|ï¿½[ï¿½g}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 ...ï¿½Oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿½
+                                                  1ï¿½ñƒŒƒ|ï¿½[ï¿½g}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 ...ï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿½1ï¿½
+                                                  ñƒŒƒ|ï¿½[ï¿½g}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ñƒŒƒ (U+43303)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 ...¿½ï¿½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿½1ï¿½ñƒŒƒ
+                                                  |ï¿½[ï¿½g}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 ...½~ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿½1ï¿½ñƒŒƒ|ï¿½
+                                                  [ï¿½g}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:66: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 ...½ï¿½ï¿½Oï¿½ï¿½ï¿½KI ï¿½ï¿½1ï¿½ñƒŒƒ|ï¿½[ï¿½
+                                                  g}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:70: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \today
+            % Date
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:70: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \today
+            % Date
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:70: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \today
+            % Date
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:70: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \today
+            % Date
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:70: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \today
+            % Date
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:72: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.72 ï¿½
+        wï¿½Ğ”Ôï¿½ % ï¿½wï¿½Ğ”Ôï¿½
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:72: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.72 ï¿½wï¿½
+            Ğ”Ôï¿½ % ï¿½wï¿½Ğ”Ôï¿½
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:72: LaTeX Error: Unicode character Ğ” (U+0414)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.72 ï¿½wï¿½Ğ”
+              Ôï¿½ % ï¿½wï¿½Ğ”Ôï¿½
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:72: LaTeX Error: Unicode character Ô (U+050D)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.72 ï¿½wï¿½Ğ”Ô
+                ï¿½ % ï¿½wï¿½Ğ”Ôï¿½
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:72: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.72 ï¿½wï¿½Ğ”Ôï¿½
+                    % ï¿½wï¿½Ğ”Ôï¿½
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:74: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.74 ï¿½
+        ï¿½ï¿½ï¿½ % ï¿½ï¿½ï¿½ï¿½
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:74: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.74 ï¿½ï¿½
+           ï¿½ï¿½ % ï¿½ï¿½ï¿½ï¿½
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:74: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.74 ï¿½ï¿½ï¿½
+              ï¿½ % ï¿½ï¿½ï¿½ï¿½
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:74: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.74 ï¿½ï¿½ï¿½ï¿½
+                  % ï¿½ï¿½ï¿½ï¿½
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:78: Undefined control sequence.
+l.78 \section
+             {ï¿½ï¿½ï¿½ï¿½ï¿½İ’ï¿½}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:78: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 \section{ï¿½
+                 ï¿½ï¿½ï¿½ï¿½İ’ï¿½}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:78: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 \section{ï¿½ï¿½
+                    ï¿½ï¿½ï¿½İ’ï¿½}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:78: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 \section{ï¿½ï¿½ï¿½
+                       ï¿½ï¿½İ’ï¿½}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:78: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 \section{ï¿½ï¿½ï¿½ï¿½
+                          ï¿½İ’ï¿½}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:78: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 \section{ï¿½ï¿½ï¿½ï¿½ï¿½
+                             İ’ï¿½}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:78: LaTeX Error: Unicode character İ’ (U+0752)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 \section{ï¿½ï¿½ï¿½ï¿½ï¿½İ’
+                               ï¿½}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:78: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 \section{ï¿½ï¿½ï¿½ï¿½ï¿½İ’ï¿½
+                                  }
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:83: Undefined control sequence.
+l.83 \section
+             {ï¿½ï¿½ï¿½ï¿½}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:83: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 \section{ï¿½
+                 ï¿½ï¿½ï¿½}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:83: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 \section{ï¿½ï¿½
+                    ï¿½ï¿½}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:83: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 \section{ï¿½ï¿½ï¿½
+                       ï¿½}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:83: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 \section{ï¿½ï¿½ï¿½ï¿½
+                          }
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:88: Undefined control sequence.
+l.88 \section
+             {ï¿½lï¿½@}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:88: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.88 \section{ï¿½
+                 lï¿½@}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:88: LaTeX Error: Unicode character ï¿½ (U+FFFD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.88 \section{ï¿½lï¿½
+                     @}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+
+
+c:/Users/kaoru/OneDrive - NITech/deep/lec2/report.tex:94: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.94 \end{document}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1
+Non-PDF special ignored!
+<special> color push  Black
+Non-PDF special ignored!
+<special> color pop
+Non-PDF special ignored!
+<special> color push  Black
+Non-PDF special ignored!
+<special> color pop
+{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+Non-PDF special ignored!
+<special> color push  Black
+Non-PDF special ignored!
+<special> color pop
+Non-PDF special ignored!
+<special> color push  Black
+Non-PDF special ignored!
+<special> color pop
+] (./report.aux)
+ ***********
+LaTeX2e <2024-06-01>
+L3 programming layer <2024-05-27>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 2064 strings out of 475517
+ 30036 string characters out of 5777238
+ 1926894 words of memory out of 5000000
+ 24722 multiletter control sequences out of 15000+600000
+ 558069 words of font info for 36 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 57i,5n,65p,267b,83s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on report.pdf (1 page, 14636 bytes).
+PDF statistics:
+ 13 PDF objects out of 1000 (max. 8388607)
+ 7 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
