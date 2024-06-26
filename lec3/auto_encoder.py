@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from keras.datasets import mnist
 
-use_small_data = True # False
+use_small_data = False
 index_plot_img = 0 # 元画像と復元画像するtest画像のindex
                    # 0からn_test-1までのいずれかの値を入れておく
 
