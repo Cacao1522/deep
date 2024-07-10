@@ -23,23 +23,46 @@ test_loader = DataLoader(testset, batch_size=batch_size, shuffle=False)
 class CNN(nn.Module):
     def __init__(self):
         super(CNN, self).__init__()
-
         #
         # 自由に作成 (Epochやoptimizerなどその他の場所も自由に編集可)
         #
+        self.fe = nn.Sequential(
+            nn.Conv2d ( in_channels =1 , out_channels =6 ,kernel_size =3 , stride =1 , padding =1) ,
+            nn.ReLU () ,
+            nn.MaxPool2d ( kernel_size =2 , stride =2) ,
+            nn.Conv2d ( in_channels =6 , out_channels =6 ,kernel_size =3 , stride =1 , padding =1) ,
+            nn.ReLU () ,
+            nn.MaxPool2d ( kernel_size =2 , stride =2) ,
+            nn.Flatten()
+        )
+        self.fc = nn.Sequential(
+            nn.Linear ( in_features = 294 , out_features = 2048),
+            nn.ReLU(),
+            #nn.Dropout(p=0.5),
+            nn.Linear ( in_features = 2048 , out_features = 10)
+        )
+        
 
     def forward(self, x):
 
         #
         # 自由に作成 (Epochやoptimizerなどその他の場所も自由に編集可)
         #
+        #print(x.size())
+        x = self.fe ( x )
+        #print(x.size())
+        logits = self.fc ( x )
+        return logits
 
 model = CNN()
 loss_fn = nn.CrossEntropyLoss() 
-optimizer = optim.Adam(model.parameters(), 
-                       lr=0.001, betas=(0.9, 0.999), eps=1e-08)
+optimizer = optim.AdamW(model.parameters(), 
+                      lr=0.001, betas=(0.9, 0.999), eps=1e-08)
+#optimizer = torch.optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
+#scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.1)
+scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=10, min_lr=1e-6)
 
-def train_loop(dataloader, model, loss_fn, optimizer):
+def train_loop(dataloader, model, loss_fn, optimizer,scheduler):
     model.train() # Trainモード (validationやtestではmodel.eval()とする)
     running_loss = 0.0
     for (X, y) in dataloader:
@@ -50,7 +73,7 @@ def train_loop(dataloader, model, loss_fn, optimizer):
         loss.backward() # 勾配計算
         optimizer.step() # パラメタ更新
         optimizer.zero_grad() # 勾配のリセット
-
+    
     return running_loss / len(dataloader)    
 
 def test_loop(dataloader, model, loss_fn):
@@ -77,9 +100,11 @@ log_test_correct = []
 for epoch in range(max_epoch):    
     print("Epoch = ", epoch)
 
-    train_loss = train_loop(train_loader, model, loss_fn, optimizer)
+    train_loss = train_loop(train_loader, model, loss_fn, optimizer,scheduler)
     test_loss, test_correct = test_loop(test_loader, model, loss_fn)
-    print(f" Test Accuracy: {(100*test_correct):>0.1f}%, Avg loss: {test_loss:>8f} \n")        
+    print(f" Test Accuracy: {(100*test_correct):>0.1f}%, Avg loss: {test_loss:>8f} \n")     
+
+    scheduler.step(test_loss)   
     log_train_loss.append(train_loss) 
     log_test_loss.append(test_loss)
     log_test_correct.append(test_correct)     
