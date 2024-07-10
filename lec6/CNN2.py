@@ -19,11 +19,18 @@ class CNN(nn.Module): # nn.Moduleを継承したCNNクラス
         self.linear = nn.Linear(in_features=6*13*13, out_features=10) # 10classに対応する10次元出力．softmax関数は損失関数側で計算される
 
     def forward(self, x):
+        print("1:",x.shape)
         x = self.conv(x)
+        print(x.size())
+        sys.exit()
         x = self.relu(x)
+        print(x.shape)
         x = self.maxpooling(x)
+        print(x.shape)
         x = self.flatten(x)
+        print(x.shape)
         logits = self.linear(x)
+        print(logits.shape)
         return logits
 
 model = CNN() # CNNクラスのオブジェクト生成

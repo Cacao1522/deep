@@ -24,14 +24,26 @@ class CNN(nn.Module):
     def __init__(self):
         super(CNN, self).__init__()
         self.fe = nn.Sequential(
-            # ???
+            nn.Conv2d ( in_channels =1 , out_channels =6 ,kernel_size =3 , stride =1 , padding =1) ,
+            nn.ReLU () ,
+            nn.MaxPool2d ( kernel_size =2 , stride =2) ,
+            nn.Conv2d ( in_channels =6 , out_channels =6 ,kernel_size =3 , stride =1 , padding =1) ,
+            nn.ReLU () ,
+            nn.MaxPool2d ( kernel_size =2 , stride =2) ,
+            nn.Flatten()
         )
         self.fc = nn.Sequential(
-            # ???
+            nn.Linear ( in_features = 294 , out_features = 100),
+            nn.ReLU(),
+            nn.Linear ( in_features = 100 , out_features = 10)
         )
 
     def forward(self, x):
-        # ???
+        #print(x.size())
+        x = self.fe ( x )
+        #print(x.size())
+        logits = self.fc ( x )
+        return logits
 
 model = CNN()
 loss_fn = nn.CrossEntropyLoss() 
