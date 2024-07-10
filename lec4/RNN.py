@@ -109,9 +109,16 @@ def sigmoid(x):
 
 def ReLU(x):
     return x*(x>0), 1*(x>0)
-    
+  
+def Tanh(x):
+    # ハイパボリックタンジェントとその微分を返す関数を作成
+
+    return np.tanh(x),1 - np.tanh(x)**2
+
 def CrossEntoropy(x, y):
     # returnの後にクロスエントロピーを返すプログラムを書く
+    # epsilon = 1e-12  # 小さな定数を追加
+    # x = np.clip(x, epsilon, 1. - epsilon)
     return -np.sum(y*np.log(x))
 
 def forward(x, z_prev, W_in, W, actfunc):
@@ -186,7 +193,7 @@ for epoch in range(0, num_epoch):
 
         for t in range(T):
             # Z_primeの「t+1列目」，nabla_fの「t列目」をforwardを使って求める
-            Z_prime[:,t+1], nabla_f[:,t] = forward(np.append(1, xi[t,:]), Z_prime[:,t+1], W_in, W, sigmoid)
+            Z_prime[:,t+1], nabla_f[:,t] = forward(np.append(1, xi[t,:]), Z_prime[:,t], W_in, W, sigmoid)
         
         Z_T = np.append(1, Z_prime[:,T])
 
@@ -235,15 +242,15 @@ for epoch in range(0, num_epoch):
         dEdW = np.dot(delta,Z_prime[:,:T].T)
 
         ##### パラメータの更新
-        W_out -= eta*dEdW_out/epoch
-        W -= eta*dEdW/epoch
-        W_in -= eta*dEdW_in/epoch
+        # W_out -= eta*dEdW_out/epoch
+        # W -= eta*dEdW/epoch
+        # W_in -= eta*dEdW_in/epoch
 
         ##### 課題4. adamを作成して更新方法を以下に変更（上の確率勾配降下の更新は消す）
         n_update += 1
         W_out, m_out, v_out = adam(W_out, m_out, v_out, dEdW_out, n_update)
         W, m_hidden, v_hidden = adam(W, m_hidden, v_hidden, dEdW, n_update)
-        W_in, m_in, v_in = adam(W_in, m_in, v_in, dEdE_in, n_update)
+        W_in, m_in, v_in = adam(W_in, m_in, v_in, dEdW_in, n_update)
 
     ##### training error
     error.append(sum(e)/n_train)
@@ -261,7 +268,7 @@ for epoch in range(0, num_epoch):
         # 訓練の時と同じ手順でZ_primeを作成
         # (こちらではnabla_fは使用しないので, 最後に"[0]"を
         #  つけることで返り値を一つだけ受け取っている)
-            Z_prime[:,t+1] = forward(np.append(1, xi[t,:]), Z_prime[:,t+1], W_in, W, sigmoid)[0]
+            Z_prime[:,t+1] = forward(np.append(1, xi[t,:]), Z_prime[:,t], W_in, W, sigmoid)[0]
             
         z_out = softmax(np.dot(W_out, np.append(1, Z_prime[:,T])))        
         prob[i,:] = z_out
@@ -280,7 +287,7 @@ plt.xlabel("Epoch", fontsize=18)
 plt.ylabel("Cross-entropy",fontsize=18)
 plt.grid()
 plt.legend(fontsize = 16)
-plt.savefig("./error.pdf", bbox_inches='tight', transparent=True)
+plt.savefig("./error.png", bbox_inches='tight', transparent=True)
 
 predict = np.argmax(prob, 1)
 
@@ -302,7 +309,7 @@ if plot_misslabeled:
                     sns.heatmap(D, cbar =False, cmap="Blues", square=True)
                     plt.axis("off")
                     plt.title('{} to {}'.format(i, j))
-                    plt.savefig("./misslabeled{}.pdf".format(l), bbox_inches='tight', transparent=True)
+                    plt.savefig("./misslabeled{}.png".format(l), bbox_inches='tight', transparent=True)
                     n_plot += 1
                     if n_plot >= n_maxplot:
                         break
@@ -326,6 +333,6 @@ fig.show()
 sns.heatmap(ConfMat.astype(dtype = int), linewidths=1, annot = True, fmt="1", cbar =False, cmap="Blues")
 ax.set_xlabel(xlabel="Predict", fontsize=18)
 ax.set_ylabel(ylabel="True", fontsize=18)
-plt.savefig("./confusion.pdf", bbox_inches="tight", transparent=True)
+plt.savefig("./confusion.png", bbox_inches="tight", transparent=True)
 plt.close()
 
