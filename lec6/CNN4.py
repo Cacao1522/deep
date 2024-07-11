@@ -33,29 +33,33 @@ class CNN(nn.Module):
         #
         self.fe = nn.Sequential(
             nn.Conv2d(
-                in_channels=1, out_channels=16, kernel_size=3, stride=1, padding=1
+                in_channels=1, out_channels=24, kernel_size=3, stride=1, padding=1
             ),
-            nn.BatchNorm2d(16),
+            nn.BatchNorm2d(24),
             nn.ReLU(),
-            nn.Conv2d(in_channels=16, out_channels=16, kernel_size=3, stride=1, padding=1),
-            nn.BatchNorm2d(16),  
+            nn.Conv2d(in_channels=24, out_channels=24, kernel_size=3, stride=1, padding=1),
+            nn.BatchNorm2d(24),  
+            nn.ReLU(),
+            #nn.MaxPool2d(kernel_size=2, stride=2),
+            nn.Conv2d(in_channels=24, out_channels=24, kernel_size=3, stride=1, padding=1),
+            nn.BatchNorm2d(24), 
+            nn.ReLU(),
+            #nn.MaxPool2d(kernel_size=2, stride=2),
+            nn.Conv2d(in_channels=24, out_channels=24, kernel_size=3, stride=1, padding=1),
+            nn.BatchNorm2d(24), 
             nn.ReLU(),
             # nn.MaxPool2d(kernel_size=2, stride=2),
-            # nn.Conv2d(in_channels=64, out_channels=128, kernel_size=3, stride=1, padding=1),
-            # nn.BatchNorm2d(128), 
-            # nn.ReLU(),
-            # nn.MaxPool2d(kernel_size=2, stride=2),
-            # nn.Conv2d(in_channels=128, out_channels=256, kernel_size=3, stride=1, padding=1),
+            # nn.Conv2d(in_channels=1224, out_channels=256, kernel_size=3, stride=1, padding=1),
             # nn.BatchNorm2d(256),  # Batch Normalization
             # nn.ReLU(),
             nn.MaxPool2d(kernel_size=2, stride=2),
             nn.Flatten(),
         )
         self.fc = nn.Sequential(
-            nn.Linear(in_features=16 * 14 * 14, out_features=2048),
-            nn.BatchNorm1d(2048),  
+            nn.Linear(in_features=24 * 14 * 14, out_features=2048),
+            #nn.BatchNorm1d(2048),  
             nn.ReLU(),
-            # nn.Dropout(p=0.5),
+            #nn.Dropout(p=0.5),
             nn.Linear(in_features=2048, out_features=10),
         )
 
