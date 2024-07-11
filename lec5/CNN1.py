@@ -5,21 +5,22 @@
 """
 import numpy as np
 import matplotlib.pyplot as plt
+
 # import seaborn as sns
 
 np.random.seed(123)
 
 
 def ReLU(x):
-    return x*(x > 0)
+    return x * (x > 0)
 
 
 def scale(x):
     # 可視化のために平均+-3*標準偏差の中に値の範囲を制限
     z = x - np.mean(x)
-    C = 3*np.std(z)
+    C = 3 * np.std(z)
     z = np.maximum(np.minimum(z, C), -C)
-    return 255*(z+C)/(2*C)
+    return 255 * (z + C) / (2 * C)
 
 
 def Convolution(X, V, act_func, H, M, padding, stride):
@@ -30,7 +31,7 @@ def Convolution(X, V, act_func, H, M, padding, stride):
     W, _, K = X.shape
     # スライド10ページを参考に畳み込み後のサイズを設定
     # ヒント: int()で実数値を囲むと切り捨てされる
-    W_next = int((W+2*padding-H)/stride+1)
+    W_next = int((W + 2 * padding - H) / stride + 1)
 
     # paddingした後のX
     # ヒント: 0で初期化した以下の３次元配列の
@@ -38,8 +39,8 @@ def Convolution(X, V, act_func, H, M, padding, stride):
     # スライド９ページ目にはpadding=1の場合の図がある
     # これを参考に指定すべき添字を考えること
     # （縦と横，どこからどこまでに元のXを入れればよいか）
-    X_padded = np.zeros((W+2*padding, W+2*padding, K))  # 全て0で初期化
-    X_padded[padding:W+padding, padding:W+padding, :] = X
+    X_padded = np.zeros((W + 2 * padding, W + 2 * padding, K))  # 全て0で初期化
+    X_padded[padding : W + padding, padding : W + padding, :] = X
     # （参考: その他にnp.pad関数を使う方法もある）
 
     U = np.zeros((W_next, W_next, M))
@@ -53,8 +54,12 @@ def Convolution(X, V, act_func, H, M, padding, stride):
                 #         X_padded["i*ストライドサイズ":"i*?? + ??", "j"を使って1次元目と同様に指定, :]
                 #         これと，今着目しているフィルター V[:,:,:,m] の要素ごとの積をとった後に和をとる
                 #         (np.sumで配列要素全ての和がとれる)
-                U[i, j, m] = np.sum(X_padded[i*stride:i*stride + H,
-                                             j*stride:j*stride + H, :] * V[:, :, :, m])
+                U[i, j, m] = np.sum(
+                    X_padded[
+                        i * stride : i * stride + H, j * stride : j * stride + H, :
+                    ]
+                    * V[:, :, :, m]
+                )
 
     # Uの値に活性化関数を適用して返す
     return act_func(U)
@@ -67,12 +72,12 @@ def MaxPooling(Z_prev, H, padding, stride):
 
     # MaxPooling後のサイズの設定
     # ヒント: 畳み込みのときと同じでよい
-    W_next = int((W+2*padding-H)/stride+1)
+    W_next = int((W + 2 * padding - H) / stride + 1)
 
     # Padding
     # ヒント: 畳み込みでの処理を参考に作成せよ
-    Z_prev_padded = np.zeros((W+2*padding, W+2*padding, K))  # 全て0で初期化
-    Z_prev_padded[padding:W+padding, padding:W+padding, :] = Z_prev
+    Z_prev_padded = np.zeros((W + 2 * padding, W + 2 * padding, K))  # 全て0で初期化
+    Z_prev_padded[padding : W + padding, padding : W + padding, :] = Z_prev
 
     Z = np.zeros((W_next, W_next, K))
     # K個のチャネルについてループ (poolingでは各チャネルごとに最大値をとる)
@@ -82,8 +87,11 @@ def MaxPooling(Z_prev, H, padding, stride):
             for j in range(W_next):
                 # 畳み込みのときを参考に，Z_prevでの対象となる要素を指定する
                 # (1, 2次元目がmaxを探す対象となる部分配列で，3次元目はkを指定すればよい)
-                Z[i, j, k] = np.max(Z_prev_padded[i*stride:i*stride + H,
-                                                  j*stride:j*stride + H, k])
+                Z[i, j, k] = np.max(
+                    Z_prev_padded[
+                        i * stride : i * stride + H, j * stride : j * stride + H, k
+                    ]
+                )
 
     return Z
 
@@ -98,7 +106,9 @@ X = np.load("./P64.npy")
 F_sobel_x = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
 F_sobel_y = np.array([[-1, -2, -1], [0, 0, 0], [1, 2, 1]])
 F_laplacian = np.array([[1, 1, 1], [1, -8, 1], [1, 1, 1]])
-F_smooth = np.array([[1/9, 1/9, 1/9], [1/9, 1/9, 1/9], [1/9, 1/9, 1/9]])
+F_smooth = np.array(
+    [[1 / 9, 1 / 9, 1 / 9], [1 / 9, 1 / 9, 1 / 9], [1 / 9, 1 / 9, 1 / 9]]
+)
 F_sharpen = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
 F_zero = np.zeros((3, 3))
 
@@ -108,8 +118,8 @@ W = X.shape[0]
 # WxWx1に変形
 X = X.reshape(W, W, 1)
 
-H = 3   # フィルタのサイズ
-M = 3   # フィルタ数
+H = 3  # フィルタのサイズ
+M = 3  # フィルタ数
 
 # フィルタ (1回目)
 # サイズは H x H x K x M
@@ -175,15 +185,15 @@ if plot_result:
             plt_idx += 1
             ax.imshow(C[:, :, i], cmap=colmap)
             ax.axis("off")
-            plt.title("Z^("+str(2*l+1)+")_ij"+str(i+1))
+            plt.title("Z^(" + str(2 * l + 1) + ")_ij" + str(i + 1))
 
         for i in range(P.shape[2]):
             ax = fig.add_subplot(3, 5, index[plt_idx])
             plt_idx += 1
             ax.imshow(P[:, :, i], cmap=colmap)
             ax.axis("off")
-            plt.title("Z^("+str(2*(l+1))+")_ij"+str(i+1))
+            plt.title("Z^(" + str(2 * (l + 1)) + ")_ij" + str(i + 1))
 
-    plt.savefig("./cnn.pdf", bbox_inches='tight', transparent=True)
+    plt.savefig("./cnn.pdf", bbox_inches="tight", transparent=True)
 
     plt.close()

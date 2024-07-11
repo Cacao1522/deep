@@ -15,7 +15,7 @@ from tensorflow.keras.utils import to_categorical
 from keras.datasets import mnist
 
 use_small_data = False  # True
-plot_misslabeled = True # False  
+plot_misslabeled = True  # False
 
 # クラス数
 m = 4
@@ -208,8 +208,8 @@ true_label = np.argmax(y_test, axis=1)
 # confusion matrixを完成させる
 ConfMat = np.zeros((m, m))
 for i in range(m):
-    for j in range(m):  
-        ConfMat[i,j]=np.sum((true_label==i)&(predict_label==j)) 
+    for j in range(m):
+        ConfMat[i, j] = np.sum((true_label == i) & (predict_label == j))
 
 # ここでConfMatの各要素を計算
 

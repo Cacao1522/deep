@@ -6,7 +6,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-#from keras.utils.np_utils import to_categorical
+
+# from keras.utils.np_utils import to_categorical
 from tensorflow.keras.utils import to_categorical
 from keras.datasets import mnist
 
@@ -55,13 +56,13 @@ def ReLU(x):
 def sigmoid(x):
     # シグモイド関数とその微分を返す関数を作成
 
-    return 1/(1+np.exp(-x)),np.exp(-x)/(1+np.exp(-x))**2
+    return 1 / (1 + np.exp(-x)), np.exp(-x) / (1 + np.exp(-x)) ** 2
 
 
 def Tanh(x):
     # ハイパボリックタンジェントとその微分を返す関数を作成
 
-    return np.tanh(x),1 - np.tanh(x)**2
+    return np.tanh(x), 1 - np.tanh(x) ** 2
 
 
 ##### 課題1(b) 順伝播の関数を作成
@@ -143,10 +144,10 @@ for epoch in range(0, num_epoch):
         z3, u3 = forward(z2, W2, ReLU)
 
         ## 第3層から出力層(第3層)へ
-        g = softmax(np.dot(W3, z3)) # softmaxを定義したらコメント外す
+        g = softmax(np.dot(W3, z3))  # softmaxを定義したらコメント外す
 
         ##### 誤差評価
-        e[i] = CrossEntoropy(g, yi) # CorssEntropyを定義したらコメント外す
+        e[i] = CrossEntoropy(g, yi)  # CorssEntropyを定義したらコメント外す
 
         ##### 課題1(c) 訓練版ここまで
 
@@ -157,16 +158,16 @@ for epoch in range(0, num_epoch):
 
         ##### 課題1(d) 逆伝播
 
-        delta3 = g-yi
+        delta3 = g - yi
         delta2 = backward(W3[:, 1:], delta3, u3)
         delta1 = backward(W2[:, 1:], delta2, u2)
         delta0 = backward(W1[:, 1:], delta1, u1)
 
         ##### 課題1(e) パラメータの更新
-        W3 = W3-eta_t*np.outer(delta3, z3.T)
-        W2 = W2-eta_t*np.outer(delta2, z2.T)
-        W1 = W1-eta_t*np.outer(delta1, z1.T)
-        W0 = W0-eta_t*np.outer(delta0, z0.T)
+        W3 = W3 - eta_t * np.outer(delta3, z3.T)
+        W2 = W2 - eta_t * np.outer(delta2, z2.T)
+        W1 = W1 - eta_t * np.outer(delta1, z1.T)
+        W0 = W0 - eta_t * np.outer(delta0, z0.T)
 
     ##### training error
     error.append(sum(e) / n)
@@ -190,10 +191,12 @@ for epoch in range(0, num_epoch):
 
         # 後で使うため，ここでは出力を(n_test x m)配列probに保存
         # （特に気にする必要なし）
-        prob[j,:] = softmax(np.dot(W3, z3)) # softmaxを定義したらコメント外す
+        prob[j, :] = softmax(np.dot(W3, z3))  # softmaxを定義したらコメント外す
 
         ##### テスト誤差: 誤差をe_testに保存
-        e_test[j] = CrossEntoropy(prob[j,:], yi) # CorssEntropyを定義したらコメント外す
+        e_test[j] = CrossEntoropy(
+            prob[j, :], yi
+        )  # CorssEntropyを定義したらコメント外す
 
         ##### 課題1(c) テスト版 ここまで
 
@@ -224,8 +227,8 @@ ConfMat = np.zeros((m, m))
 # ここでConfMatの各要素を計算
 # (前回作成したものを使えばよい)
 for i in range(m):
-    for j in range(m):  
-        ConfMat[i,j]=np.sum((true_label==i)&(predict_label==j)) 
+    for j in range(m):
+        ConfMat[i, j] = np.sum((true_label == i) & (predict_label == j))
 plt.clf()
 fig, ax = plt.subplots(figsize=(5, 5))
 sns.heatmap(
