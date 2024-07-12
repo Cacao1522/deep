@@ -19,7 +19,7 @@ testset = datasets.FashionMNIST(
     root="./data", train=False, download=True, transform=transforms.ToTensor()
 )
 
-max_epoch = 5
+max_epoch = 10
 batch_size = 100
 train_loader = DataLoader(trainset, batch_size=batch_size, shuffle=True)
 test_loader = DataLoader(testset, batch_size=batch_size, shuffle=False)
@@ -56,11 +56,11 @@ class CNN(nn.Module):
             nn.Flatten(),
         )
         self.fc = nn.Sequential(
-            nn.Linear(in_features=24 * 14 * 14, out_features=2048),
-            #nn.BatchNorm1d(2048),  
+            nn.Linear(in_features=24 * 14 * 14, out_features=100),
+            #nn.BatchNorm1d(1024),  
             nn.ReLU(),
-            #nn.Dropout(p=0.5),
-            nn.Linear(in_features=2048, out_features=10),
+            nn.Dropout(p=0.5),
+            nn.Linear(in_features=100, out_features=10),
         )
 
     def forward(self, x):
