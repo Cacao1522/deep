@@ -19,7 +19,7 @@ testset = datasets.FashionMNIST(
     root="./data", train=False, download=True, transform=transforms.ToTensor()
 )
 
-max_epoch = 10
+max_epoch = 20
 batch_size = 100
 train_loader = DataLoader(trainset, batch_size=batch_size, shuffle=True)
 test_loader = DataLoader(testset, batch_size=batch_size, shuffle=False)
@@ -44,7 +44,7 @@ class CNN(nn.Module):
             nn.Conv2d(in_channels=24, out_channels=24, kernel_size=3, stride=1, padding=1),
             nn.BatchNorm2d(24), 
             nn.ReLU(),
-            #nn.MaxPool2d(kernel_size=2, stride=2),
+            nn.MaxPool2d(kernel_size=2, stride=2),
             nn.Conv2d(in_channels=24, out_channels=24, kernel_size=3, stride=1, padding=1),
             nn.BatchNorm2d(24), 
             nn.ReLU(),
@@ -56,7 +56,7 @@ class CNN(nn.Module):
             nn.Flatten(),
         )
         self.fc = nn.Sequential(
-            nn.Linear(in_features=24 * 14 * 14, out_features=100),
+            nn.Linear(in_features=24 * 7 * 7, out_features=100),
             #nn.BatchNorm1d(1024),  
             nn.ReLU(),
             nn.Dropout(p=0.5),

@@ -157,7 +157,7 @@ V1[:, :, 1, 2] = F_zero
 V1[:, :, 2, 2] = F_laplacian
 ###
 
-Z3 = Z1 = Convolution(X, V1, ReLU, H, M, 1, 1)
+Z3 = Convolution(Z2, V1, ReLU, H, M, 1, 1)
 
 Z4 = MaxPooling(Z3, 2, 1, 2)
 
