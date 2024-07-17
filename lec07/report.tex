@@ -1,0 +1,234 @@
+\documentclass{jarticle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{graphicx}
+\usepackage{bm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% format stuffs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\oddsidemargin}{0.455cm} 
+\setlength{\evensidemargin}{0.455cm} 
+\setlength{\textwidth}{15.5cm} 
+\setlength{\textheight}{22.54cm}
+\setlength{\headheight}{0mm}
+\setlength{\headsep}{0mm}
+\setlength{\topskip}{0mm}
+\setcounter{topnumber}{100}
+\setcounter{bottomnumber}{100}
+\setcounter{totalnumber}{100}
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\bottomfraction}{1.0}
+\renewcommand{\textfraction}{0.0}
+\renewcommand{\floatpagefraction}{0.0}
+\renewcommand{\baselinestretch}{1.0}
+\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% math symbols and commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\eq}[1]{(\ref{#1})}
+\newcommand{\mtx}[2]{\left[\begin{array}{#1} #2 \end{array}\right]}
+\newcommand{\mycase}[1]{\left\{\begin{array}{ll} #1 \end{array} \right.}
+\newcommand{\mb}[1]{\mbox{\boldmath$#1$}}
+\newcommand{\lw}[1]{\smash{\lower2.ex\hbox{#1}}}
+\newcommand{\zero}{\mathbf{0}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\eps}{\varepsilon}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% colors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\myred}[1]{\textcolor{red}{#1}}
+\newcommand{\myredbf}[1]{\textcolor{red}{\bf #1}}
+\newcommand{\myblue}[1]{\textcolor{blue}{#1}}
+\newcommand{\mybluebf}[1]{\textcolor{blue}{\bf #1}}
+\newcommand{\mydarkblue}[1]{\textcolor[rgb]{0.0,0.0,0.5}{#1}}
+\newcommand{\mygreen}[1]{\textcolor[rgb]{0.0,0.5,0.0}{#1}}
+\newcommand{\mygreenbf}[1]{\textcolor[rgb]{0.0,0.5,0.0}{\bf #1}}
+\newcommand{\mypurple}[1]{\textcolor[rgb]{0.5,0.0,0.5}{#1}}
+\newcommand{\mypurplebf}[1]{\textcolor[rgb]{0.5,0.0,0.5}{\bf #1}}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ここからがレポートの記述
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center} 
+{\large \bf 知能プログラミング演習I 第7回レポート}
+\end{center} %
+
+\begin{flushright} 
+XXXX年YYYY月ZZZZ日 % Date
+\hskip 1mm
+学籍番号 % 学籍番号
+\hskip 1mm
+氏名 % 氏名
+\end{flushright} % Name
+
+\renewcommand{\theenumi}{(\alph{enumi})}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{課題１}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{enumerate}
+ \item 
+	\begin{align*}
+	 \text{\tt x} + \text{\tt y}
+	 : 
+	 \begin{bmatrix}
+	  x_1 + y_1 \\
+	  x_2 + y_2 \\
+	  x_3 + y_3 
+	 \end{bmatrix}, \
+	 \text{\tt x} - \text{\tt y} &:
+	 \begin{bmatrix}
+	  ??? \\
+	  ??? \\
+	  ??? 
+	 \end{bmatrix}, \
+	 \text{\tt x} * \text{\tt y}
+	 :
+	 \begin{bmatrix}
+	  ??? \\
+	  ??? \\
+	  ??? 
+	 \end{bmatrix}, \ 
+	 \text{\tt x} / \text{\tt y}
+	 :
+	 \begin{bmatrix}
+	  ??? \\
+	  ??? \\
+	  ??? 
+	 \end{bmatrix}
+	\end{align*}
+
+ \item 
+	\begin{align*}
+	 \text{\tt M} + \text{\tt x}:
+	 \begin{bmatrix}
+	  ??? \\
+	  ??? \\
+	  ??? 
+	 \end{bmatrix}, \
+	 % \\
+	 \text{\tt M} - \text{\tt x}: 
+	 \begin{bmatrix}
+	  ??? \\
+	  ??? \\
+	  ??? 
+	 \end{bmatrix}, \
+	 % \\
+	 \text{\tt M} * \text{\tt x}: 
+	 \begin{bmatrix}
+	  ??? \\
+	  ??? \\
+	  ??? 
+	 \end{bmatrix}, \
+	 % \\
+	 \text{\tt M} / \text{\tt x}: 
+	 \begin{bmatrix}
+	  ??? \\
+	  ??? \\
+	  ??? 
+	 \end{bmatrix}
+	\end{align*}
+	
+ \item 
+	\begin{align*}
+	 \text{\tt N + K}:  
+	 \left[
+	 ???, 
+	 ???
+	 \right] 
+	 \in \mathbb{R}^{??? \times ??? \times ???}	 
+	\end{align*}
+
+ \item 
+	\begin{align*}
+	 \text{\tt N @ M.transpose(0,1)}
+	 &: 
+	 % =
+	 \left[
+	 ???, 
+	 ???
+	 \right] 
+	 \in \mathbb{R}^{??? \times ??? \times ???}	 	 
+	\end{align*}
+
+	\begin{align*}
+	 \text{\tt linear.weight}: \bm W \in \mathbb{R}^{??? \times ???}
+	\end{align*}
+
+	\begin{align*}
+	 \text{\tt linear(M)} &: 
+	 ???
+	 \in \mathbb{R}^{??? \times ???}
+	 \\
+	 \text{\tt linear(N)} &:  
+	 	 \left[
+	 ???,
+	 ???
+	 \right]
+	 \in \mathbb{R}^{??? \times ??? \times ???}
+	\end{align*}
+
+ \item 
+	\begin{align*}
+	 \text{\tt A @ V}: &
+	 \left[
+	 ???,
+	 ???
+	 \right]
+	 \in \mathbb{R}^{??? \times ??? \times ???}
+	\end{align*}
+
+ \item 
+	\begin{align*}
+	 \text{\tt V.transpose(1,2))}: &
+	 \left[
+	 ???,
+	 ???
+	 \right]	 
+	 \\
+	 \text{\tt N @ V.transpose(1,2)}: &
+	 \left[
+	 ???,
+	 ???
+	 \right]
+	 \in \mathbb{R}^{??? \times ??? \times ???}
+	\end{align*}
+
+ \item 
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{課題２}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{enumerate}
+ \item 
+ \item 
+ \item 
+ \item 
+ \item 
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{課題３}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{enumerate}
+ \item 
+ \item 
+\end{enumerate}
+
+\end{document}
