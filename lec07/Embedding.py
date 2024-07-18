@@ -37,6 +37,12 @@ class PositionalEncoding(nn.Module):
 
         #
         # ここにpeの要素を定義するコードを作成
+        for l in range(L):
+            for i in range(dim_embed):
+                if (i%2 == 0):
+                    pe[l][i] = np.sin(l/10000**(i/L))
+                else:
+                    pe[l][i] = np.cos(l/10000**((i-1)/L))
         #     
         
         self.register_buffer('pe', pe) # 今回のPositionalEncodingは学習しない定数であることの指定(これ以降，クラス内からはself.peでアクセス可能(編集不要)
@@ -109,14 +115,14 @@ for i in range(len(strs)):
     print(f"{strs[i]}: {input_idx[i]}")
 
 x = token_embedding(input_idx)
-
+print(x)
 plot_embedding(strs, x.detach().numpy(), 'embed-1.pdf') # x.detach().numpy()はxをnumpy配列に変換
 
 # -- 以降は実装したら順次コメントを外す --
 
-# x = pe(x)
+x = pe(x)
 
-# plot_embedding(strs, x.detach().numpy(), 'embed-2.pdf')        
+plot_embedding(strs, x.detach().numpy(), 'embed-2.pdf')        
 
 # selfatten = SelfAttention(dim_embed=2, head_size=2)
 

@@ -33,36 +33,36 @@ class CNN(nn.Module):
         #
         self.fe = nn.Sequential(
             nn.Conv2d(
-                in_channels=1, out_channels=32, kernel_size=3, stride=1, padding=1
+                in_channels=1, out_channels=30, kernel_size=3, stride=1, padding=1
             ),
-            nn.BatchNorm2d(32),
+            nn.BatchNorm2d(30),
             nn.ReLU(),
-            nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, stride=1, padding=1),
-            nn.BatchNorm2d(32),  
-            nn.ReLU(),
-            #nn.MaxPool2d(kernel_size=2, stride=2),
-            nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, stride=1, padding=1),
-            nn.BatchNorm2d(32), 
-            nn.ReLU(),
-            nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, stride=1, padding=1),
-            nn.BatchNorm2d(32), 
+            nn.Conv2d(in_channels=30, out_channels=30, kernel_size=3, stride=1, padding=1),
+            nn.BatchNorm2d(30),  
             nn.ReLU(),
             #nn.MaxPool2d(kernel_size=2, stride=2),
-            nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, stride=1, padding=1),
-            nn.BatchNorm2d(32), 
+            nn.Conv2d(in_channels=30, out_channels=30, kernel_size=3, stride=1, padding=1),
+            nn.BatchNorm2d(30), 
+            nn.ReLU(),
+            nn.Conv2d(in_channels=30, out_channels=30, kernel_size=3, stride=1, padding=1),
+            nn.BatchNorm2d(30), 
+            nn.ReLU(),
+            #nn.MaxPool2d(kernel_size=2, stride=2),
+            nn.Conv2d(in_channels=30, out_channels=30, kernel_size=3, stride=1, padding=1),
+            nn.BatchNorm2d(30), 
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=2, stride=2),
-            nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, stride=1, padding=1),
-            nn.BatchNorm2d(32),  # Batch Normalization
+            nn.Conv2d(in_channels=30, out_channels=30, kernel_size=3, stride=1, padding=1),
+            nn.BatchNorm2d(30),  # Batch Normalization
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=2, stride=2),
             nn.Flatten(),
         )
         self.fc = nn.Sequential(
-            nn.Linear(in_features=32 * 7 * 7, out_features=2048),
-            #nn.BatchNorm1d(1032),  
+            nn.Linear(in_features=30 * 7 * 7, out_features=2048),
+            #nn.BatchNorm1d(1030),  
             nn.ReLU(),
-            #nn.Dropout(p=0.5),
+            nn.Dropout(p=0.5),
             nn.Linear(in_features=2048, out_features=10),
         )
 
