@@ -63,16 +63,16 @@ class SelfAttention(nn.Module):
         K = self.key(x)
         Q = self.query(x)
         V = self.value(x)
-
+        print(K)
         #
         # ここにK, Q, Vを使ったself-attentionの処理を作成
         # 
         
-        # K_t = ... Kの転置処理．Kのサイズをよく考えること
+        K_t = K.T#Kの転置処理．Kのサイズをよく考えること
         
-        # scaled_dot_product = ...
+        scaled_dot_product = (Q @ K_t / np.sqrt(self.head_size))@V
 
-        # atten_wei = F.softmax(scaled_dot_product, dim=???) # どの次元でsoftmaxをとる?
+        atten_wei = F.softmax(scaled_dot_product, dim=0) # どの次元でsoftmaxをとる?
         
         # out = ... 最終的な出力
 
