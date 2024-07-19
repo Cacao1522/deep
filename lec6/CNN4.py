@@ -88,7 +88,7 @@ scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
 )
 
 
-def train_loop(dataloader, model, loss_fn, optimizer, scheduler):
+def train_loop(dataloader, model, loss_fn, optimizer):
     model.train()  # Trainモード (validationやtestではmodel.eval()とする)
     running_loss = 0.0
     for X, y in dataloader:
@@ -128,7 +128,7 @@ log_test_correct = []
 for epoch in range(max_epoch):
     print("Epoch = ", epoch)
 
-    train_loss = train_loop(train_loader, model, loss_fn, optimizer, scheduler)
+    train_loss = train_loop(train_loader, model, loss_fn, optimizer)
     test_loss, test_correct = test_loop(test_loader, model, loss_fn)
     print(f" Test Accuracy: {(100*test_correct):>0.1f}%, Avg loss: {test_loss:>8f} \n")
 
