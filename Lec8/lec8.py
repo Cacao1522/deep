@@ -40,7 +40,8 @@ plt.legend()
 
 # レイアウト調整
 plt.tight_layout()
-plt.show()
+#plt.show()
+plt.savefig("price.pdf")
 
 # 訓練データとテストデータの分割
 training_size = int(len(data_scaled) * 0.8)
